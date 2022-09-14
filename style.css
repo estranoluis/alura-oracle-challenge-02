@@ -1,0 +1,707 @@
+/* PAGINA INICIAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #F3F5FC;
+}
+
+#header-inicial{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pagina-inicial{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display:flex;
+    
+}
+
+#pagina-juego{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    display:none;
+    
+}
+
+#pagina-ingreso-palabra{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+#img-logo{
+    margin-left: 80px;
+}
+#img-logo2{
+    display:none; 
+    margin-left: 40px;
+}
+
+#main-inicial{
+    max-width: 1200px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-btn{
+    width: 30vh;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#btn-iniciar{
+    height: 114px;
+    width: 317px;
+    border:none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border:3px solid #F3F5FC;
+    background-color: #0A3871;
+    color:#F3F5FC;
+}
+
+#btn-palabra{
+    height: 67px;
+    width: 280px;
+    border:1px solid #0A3871;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    color:#0A3871;
+}
+
+#teclado{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    height:15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#creador{
+    font-size: 20px;
+    font-weight: 700;
+    color: #0A3871;
+    text-align: center;
+}
+
+@media screen and (max-width:780px){
+    #div-btn{
+        height: 80%;
+
+    }
+    #teclado{
+        width: 100%;
+        height: 120px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #0A3871;
+        justify-content: space-around;
+        grid-gap: 3px;
+        margin-bottom: 10px;
+    }
+
+    .fila{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .fila button{
+        width: 9%;
+        height:100%;
+        background-color: #F3F5FC;
+        color:#0A3871;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        border:none;
+    }
+}
+
+@media screen and (max-width:400px){
+    #div-btn{
+        height: 45vh;
+    }
+
+    #teclado{
+        width: 100%;
+        height: 120px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #0A3871;
+        justify-content: space-around;
+        grid-gap: 3px;
+    }
+
+    .fila{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .fila button{
+        width: 9%;
+        height:100%;
+        background-color: #F3F5FC;
+        color:#0A3871;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        border:none;    
+    }
+}
+
+.cambio-color{
+    width: 100px;
+    height: 40%;
+    background-color: #0A3871;
+    border-radius: 30px;
+    margin-right: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn-color{
+    background-color: #F3F5FC;
+    width: 40%;
+    height:90%;
+    border:none;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.colorAzul{
+    background-color: #0A3871;
+    color:#F3F5FC;
+    transition: all 0.5s;
+}
+
+.colorBlanco{
+    background-color: #F3F5FC;
+    color:#0A3871;
+    transition: all 0.5s;
+}
+
+
+
+/* PAGINA DE JUEGO */
+
+#header-juego{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#img-logo{
+    margin-left: 40px;
+}
+
+#main-juego{
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+#section-juego{
+    width: 100%;
+    height: 84%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#ahorcado{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas{
+    background-color: #E5E5E5;
+    width:680px;
+    height:418px;
+}
+
+.mensaje-final{
+    position:absolute;
+    width: 100vw;
+    height: auto;
+    background-color:#3334;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-final-gano{
+    font-size: 2em;
+    color:#0f0;
+    font-weight: bold;
+    background-color:#0A3871;
+    padding:10px;
+    border-radius: 20px;
+    animation: myAnim 3s ease 0s 1 normal forwards;
+}
+
+.mensaje-final-perdio{
+    font-size: 2em;
+    color:#f00;
+    font-weight: bold;
+    background-color:#0A3871;
+    padding:10px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    animation: myAnim 3s ease 0s 1 normal forwards;
+}
+.mensaje-final-perdio-pala{
+    font-size: 1em;
+    color:#f00;
+    font-weight: bold;
+    background-color:#0A3871;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top:5px;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(2);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(2);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(2);
+	}
+}
+
+#imaginario{
+    border:none;
+    background-color: #E5E5E5;
+}
+
+#palabra{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:5px;
+}
+
+.letras{
+    width: 50px;
+    height: 100%;
+    border-bottom:4px solid #0A3871;
+    border-radius: 30px;
+    margin:0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.p-letras{  
+    font-size: 2.5em;
+    font-weight: bold;
+    color:#0A3871;
+    border:none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#letras-error{
+    width: 100%;
+    height: 50px;
+    margin:5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error{
+    height: 50px;
+    font-size: 1.8em;
+    font-weight:bolder;
+    color:rgb(204, 9, 9);
+}
+
+#section-btn-juego{
+    width: 100%;
+    height: auto; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+.btn-juego{
+    width: 320px;
+    height: 67px;
+    border-radius: 30px;
+    border:1px solid #0A3871;
+}
+
+#btn-nuevo{
+    background-color: #0A3871;
+    color:#E5E5E5;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    border:2px solid #E5E5E5;
+}
+
+#btn-desistir{
+    color:#0A3871;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width:780px){
+    #canvas{
+        background-color: #E5E5E5;
+        max-width: 400px;
+        min-width: 400px;
+        height: 400px;
+    }
+    #palabra{
+        align-items: flex-end;
+        margin-top:5px
+    }
+
+    .letras{
+        margin-top:0px;
+        font-size: 0.5em;
+        font-weight: bold;
+        color:#0A3871;
+        border-radius:30px;
+    }
+    .p-letras{  
+        font-size: 2.5em;
+        font-weight: bold;
+        color:#0A3871;
+        border:none;
+        width: 100%;
+        height: 100%;
+        background-color: #E5E5E5;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .mensaje-final{
+        position:absolute;
+        width: 100vw;
+        height: auto;
+        background-color:#3334;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+}   
+
+@media screen and (max-width:430px){
+
+    #header-juego{
+        height: 10vh;
+        display: none;
+    }
+    #main-juego{
+        max-width: 100%;
+        max-height: auto;
+    }
+    
+    #img-logo{
+        margin-left: 40px;
+    }
+    #canvas{
+        width: 250px;
+        height: 260px;
+    }
+    
+
+    #section-btn-juego{
+        width: 100%;
+        flex-wrap: wrap;
+        height: 120px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .btn-juego{
+        width: 300px;
+        height: 50px;
+        border-radius: 30px;
+        border:1px solid #0A3871;
+    }
+
+    #palabra{
+        align-items: flex-end;
+        margin-top:5px
+    }
+
+    .letras{
+        margin-top:0px;
+        font-size: 0.5em;
+        font-weight: bold;
+        color:#0A3871;
+    }
+
+    .p-letras{  
+        font-size: 2.5em;
+        font-weight: bold;
+        color:#0A3871;
+        border:none;
+        width: 100%;
+        height: 100%;
+        background-color: #E5E5E5;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .mensaje-final{
+        position:absolute;
+        width: 100vw;
+        height: 40vh;
+        background-color:#3334;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mensaje-final-gano{
+        font-size: 2em;
+        color:#0f0;
+        font-weight: bold;
+        background-color:#0A3871;
+        padding:10px;
+        border-radius: 20px;
+    }
+    
+    .mensaje-final-perdio{
+        font-size: 2em;
+        color:#f00;
+        font-weight: bold;
+        background-color:#0A3871;
+        padding:10px;
+        border-radius: 20px;
+    }
+    
+}
+
+
+
+/* PAGINA INGRESO DE PALABRAS*/
+
+#header-palabra{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#img-logo{
+    margin-left: 40px;
+}
+
+#main-palabra{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#section-input{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+#ingresar-palabra{
+    border:none;
+    width: 400px;
+    height: 50px;
+    background-color:#fff;
+    color:#0A3871;
+    font-weight: bold;
+    font-size: 1.7em; 
+    border-radius: 20px;
+    text-align: center;
+}
+
+#ingresar-palabra::placeholder{
+    color:#0A3871;
+    font-weight: bold;
+    font-size: 1em; 
+    text-align: center;
+}
+
+#section-btn{
+    width: 80%;
+    height: 30%; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.btn{
+    width: 317px;
+    height: 67px;
+    border-radius: 30px;
+    border:1px solid #0A3871;
+    color:#0A3871;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-guardar{
+    background-color: #0A3871;
+    color:#E5E5E5;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border:1px solid #E5E5E5;
+}
+
+#mensaje{
+    align-self: center;
+}
+
+footer{
+    width: 100%;
+    height:15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#creador{
+    font-size: 20px;
+    font-weight: 700;
+    color: #0A3871;
+    text-align: center;
+}
+
+@media screen and (max-width:780px){
+    
+    .btn{
+        width: 280px;
+        height: 67px;
+    }
+    #mensaje{
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:425px){
+    
+    #section-input{
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+    }
+
+    #ingresar-palabra{
+        border:none;
+        width: 100%;
+    }
+
+    .btn{
+        width: 280px;
+        height: 67px;
+    }
+
+    #section-btn{
+        flex-direction: column;
+        height: 100%; 
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    #mensaje{
+    align-self: center;
+}
+    
+
+    footer{
+        height: 10vh;
+    }
+}
